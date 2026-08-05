@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A project portfolio for Harith Marzuki." />
+    <title>The Corely-Verse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-noise"></div>
+    <main id="top">
+      <section class="welcome container">
+        <p class="eyebrow"><span></span> The path towards AI consciousness lies here </p>
+        <h1>Welcome to the <span class="accent">Corely-verse.</span></h1>
+        <p> Built with passion and love, Corely uses a novel AI architecture that utilizes multiple interconnected components that are inspired by the human brain. However, rather than focusing on the neural networks, the architecture focuses on the brain's structure at large, attempting to recreate the communication environment that exist between different parts of the brain. </p>
+        <a class="button" href="#work">Explore<span>↓</span></a>
+        <div class="welcome-orbit" aria-hidden="true"><i></i><i></i><b></b></div>
+      </section>
+
+      <section class="work-section" id="work">
+        <article class="project-band band-corely">
+          <div class="project-inner container">
+            <div class="project-info">
+              <p class="project-number mono"><span class="accent">"The humble beginning where it all began"</span></p>
+              <h2>Project <span class="accent">Corely</span></h2>
+              <p class="project-copy"> The first experiment that created Corely as a digital lifeform inside a computer. Using the live feed of the camera and microphone, Corely continously perceive the world by selectively memorizing and learning through the memory crawler system. The wake and sleep cycle are controlled from the skeumorphic control panel software, which also provide live monitoring of her internal processes. </p>
+              <a class="text-link" href="https://github.com/HarithMarzuki/Project-Corely" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+              <a class="text-link" href="https://youtu.be/9sQTOwh_TcI?si=kS9CzkipViFnqn_F" target="_blank" rel="noreferrer">Watch project video <span>↗</span></a>
+            </div>
+            <div class="slideshow corely-visual" aria-label="Project Corely visual preview">
+              <div class="slide slide-core-one is-active"><img class="slide-image" src="images/image_1_1.jpg" alt="Project Corely preview image 1" /><span>FACE // 01</span></div>
+              <div class="slide slide-core-two"><img class="slide-image" src="images/image_1_2.jpg" alt="Project Corely preview image 2" /><span>VIDEO // 02</span></div>
+              <div class="slide slide-core-three"><img class="slide-image" src="images/image_1_3.png" alt="Project Corely preview image 3" /><span>CONTROL PANEL // 03</span></div>
+              <div class="slide-dots"><b class="is-active"></b><b></b><b></b></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-band band-nano">
+          <div class="project-inner container">
+            <div class="project-info">
+              <p class="project-number mono"><span class="accent">"One small step for Corely, one big step for AI consciousness"</span></p>
+              <h2>Project <span class="accent"> Nano Corely</span></h2>
+              <p class="project-copy"> Bringing Corely out the computer and onto the real world by giving her control over a physical robot body. Her system was shrukened and overhauled to allow it to run locally on a Raspberry Pi Zero 2W connected to an ESP32 microcontroller that controls the servos and motors. </p>
+              <a class="text-link" href="https://github.com/HarithMarzuki/Project-Nano-Corely" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+            </div>
+            <div class="slideshow nano-visual" aria-label="Project Nano Corely visual preview">
+              <div class="slide slide-nano-one is-active"><img class="slide-image" src="images/image_2_1.jpg" alt="Project Nano Corely preview image 1" /><span>APPEARENCE // 01</span></div>
+              <div class="slide slide-nano-two"><img class="slide-image" src="images/image_2_2.jpg" alt="Project Nano Corely preview image 2" /><span>LIVE TEST // 02</span></div>
+              <div class="slide slide-nano-three"><img class="slide-image" src="images/image_2_3.jpg" alt="Project Nano Corely preview image 3" /><span>HARDWARE // 03</span></div>
+              <div class="slide-dots"><b class="is-active"></b><b></b><b></b></div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© 2026 Harith Marzuki @ Thatguydayth</p>
+      <div class="social-links">
+        <a href="https://github.com/HarithMarzuki" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.tiktok.com/@thatguydayth" target="_blank" rel="noreferrer">TikTok ↗</a>
+        <a href="https://www.youtube.com/@thatguydayth" target="_blank" rel="noreferrer">YouTube ↗</a>
+        <a href="https://x.com/thatguydayth" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll('.slideshow').forEach((show) => {
+        const slides = show.querySelectorAll('.slide');
+        const dots = show.querySelectorAll('.slide-dots b');
+        let active = 0;
+        setInterval(() => {
+          slides[active].classList.remove('is-active');
+          dots[active].classList.remove('is-active');
+          active = (active + 1) % slides.length;
+          slides[active].classList.add('is-active');
+          dots[active].classList.add('is-active');
+        }, 3800);
+      });
+    </script>
+  </body>
+</html>
